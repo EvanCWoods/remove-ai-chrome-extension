@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Remove AI Summary",
+    "description": "A browser extension that removes AI-generated summaries from Google search results.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://google.com/*",
+                "https://www.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
